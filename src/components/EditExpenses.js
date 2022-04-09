@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 
-export default class EditIncome extends Component {
+export default class EditExpenses extends Component {
   state = {
-    income: {},
+    expenses: {},
     isLoaded: false,
     error: null,
   }
@@ -17,33 +17,33 @@ export default class EditIncome extends Component {
   // }
 
   render() {
-    let {income} = this.state;
+    let {expenses} = this.state;
 
     return(
       <Fragment>
-        <h2>Add/Edit income</h2>
+        <h2>Add/Edit Expenses</h2>
         <hr />
         <form method='post'>
 
           <div className='mb-3'>
-            <label for='tanggal_in' className='form-label'>
+            <label for='tanggal_ex' className='form-label'>
               Tanggal
             </label>
-            <input type='text' className='form-control' id='tanggal_in' name='tanggal_in' value={income.tanggal_in}/>
+            <input type='text' className='form-control' id='tanggal_ex' name='tanggal_ex' value={expenses.tanggal_ex}/>
           </div>
 
           <div className='mb-3'>
-            <label for='jumlah_in' className='form-label'>
+            <label for='jumlah_ex' className='form-label'>
               Jumlah
             </label>
-            <input type='jumlah_in' className='form-control' id='jumlah_in' name='jumlah_in' value={income.jumlah_in}/>
+            <input type='jumlah_ex' className='form-control' id='jumlah_ex' name='jumlah_ex' value={expenses.jumlah_ex}/>
           </div>
 
           <div className='mb-3'>
-            <label for='catatan_in' className='form-label'>
+            <label for='catatan_ex' className='form-label'>
               Catatan
             </label>
-            <input type='text' className='form-control' id='catatan_in' name='catatan_in' value={income.catatan_in}/>
+            <input type='text' className='form-control' id='catatan_ex' name='catatan_ex' value={expenses.catatan_ex}/>
           </div>
           <hr />
           <button className='btn'>Simpan</button>

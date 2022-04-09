@@ -1,9 +1,10 @@
 import React, {Fragment} from 'react';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Income from './components/Income';
-import Expenses from './components/Expenses';
+// import Income from './components/Income';
+// import Expenses from './components/Expenses';
 import Home from './components/Home';
 import EditIncome from './components/EditIncome';
+import EditExpenses from './components/EditExpenses';
 // import './App.css';
 
 
@@ -28,26 +29,30 @@ export default function App() {
                   <Link to="/">Home</Link>
                 </li>
                 <li className='list-group-item'>
-                  <Link to="/income">Income</Link>
+                  <Link to="/income/add">Income</Link>
                 </li>
-                <li className='list-group-item'>
+                {/* <li className='list-group-item'>
                   <Link to="/income/add">Income 1</Link>
-                </li>
+                </li> */}
                 <li className='list-group-item'>
-                  <Link to="/expenses">Expenses</Link>
+                  <Link to="/expenses/add">Expenses</Link>
                 </li>
               </ul>
             </nav>
           </div>
           <div className='col-md-10'>
             <Switch>
+
               <Route path="/income/add" component={EditIncome} />
-              <Route path="/income">
+              {/* <Route path="/income/">
                 <Income />
-              </Route>
-              <Route path="/expenses">
+              </Route> */}
+
+              <Route path="/expenses/add" component={EditExpenses} />
+              {/* <Route path="/expenses">
                 <Expenses />
-              </Route>
+              </Route> */}
+              
               <Route path="/">
                 <Home />
               </Route>
