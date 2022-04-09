@@ -29,7 +29,7 @@ export default function App() {
                   <Link to="/">Home</Link>
                 </li>
                 <li className='list-group-item'>
-                  <Link to="/income/add">Income</Link>
+                  <Link to="/income/income/0">Income</Link>
                 </li>
                 {/* <li className='list-group-item'>
                   <Link to="/income/add">Income 1</Link>
@@ -43,7 +43,7 @@ export default function App() {
           <div className='col-md-10'>
             <Switch>
 
-              <Route path="/income/add" component={EditIncome} />
+              <Route path="/income/income/:id" component={EditIncome} />
               {/* <Route path="/income/">
                 <Income />
               </Route> */}
